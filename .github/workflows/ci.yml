@@ -24,7 +24,7 @@ jobs:
       - name: Build Project
         if: github.event_name == 'push'
         run: npm run build
-      - run: npom install -g surge
+      - run: npm install -g surge
       - name: Deploy to Staging
         if: github.event_name == 'push'
         run: npx surge --project ./build --domain insidious-basket.surge.sh
