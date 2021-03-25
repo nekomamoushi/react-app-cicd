@@ -20,6 +20,11 @@
     "format:check": "prettier --check \"**/*.{js,jsx,yml,yaml,css,scss}\"",
     "format": "prettier --write \"**/*.{js,jsx,yml,yaml,css,scss}\""
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -37,5 +42,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.0.1",
+    "@commitlint/config-conventional": "^12.0.1",
+    "husky": "^4.3.8",
+    "semantic-release": "^17.4.2"
   }
 }
